@@ -1,0 +1,50 @@
+POST http://127.0.0.1:8000/api/v1/api-token-auth/
+Content-type: application/json; charset=utf-8
+
+{
+    "username": "asus",
+    "password": "asus"
+} 
+
+####
+"token": "360a195af21368d194f3fa9c14020903f7b9060c"
+Authorization: token xxx
+####
+GET http://127.0.0.1:8000/
+Content-type: application/json; charset=utf-8
+Authorization: token 360a195af21368d194f3fa9c14020903f7b9060c
+
+####
+GET http://127.0.0.1:8000/api/v1/posts/
+Content-type: application/json; charset=utf-8
+Authorization: token 360a195af21368d194f3fa9c14020903f7b9060c
+
+###
+GET http://127.0.0.1:8000/api/v1/groups/1/
+Content-type: application/json; charset=utf-8
+Authorization: token 360a195af21368d194f3fa9c14020903f7b9060c
+
+###
+POST http://127.0.0.1:8000/api/v1/posts/
+Content-type: application/json; charset=utf-8
+Authorization: token 360a195af21368d194f3fa9c14020903f7b9060c
+
+{
+    "text": "Вечером собрались в редакции «Русской мысли», чтобы поговорить о народном театре. Проект Шехтеля всем нравится.",
+    "group" : 1
+} 
+
+###
+GET http://127.0.0.1:8000/api/v1/posts/9/comments
+Content-type: application/json; charset=utf-8
+Authorization: token 360a195af21368d194f3fa9c14020903f7b9060c
+
+###
+
+POST http://127.0.0.1:8000/api/v1/posts/9/comments
+Content-type: application/json; charset=utf-8
+Authorization: token 360a195af21368d194f3fa9c14020903f7b9060c
+
+{
+    "text": "Hello, world"
+}
