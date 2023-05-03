@@ -35,16 +35,13 @@ Authorization: token 360a195af21368d194f3fa9c14020903f7b9060c
 } 
 
 ###
-GET http://127.0.0.1:8000/api/v1/posts/9/comments
+GET http://127.0.0.1:8000/api/v1/posts/6/comments/
 Content-type: application/json; charset=utf-8
 Authorization: token 360a195af21368d194f3fa9c14020903f7b9060c
 
 ###
 
-POST http://127.0.0.1:8000/api/v1/posts/9/comments
+DELETE http://127.0.0.1:8000/api/v1/posts/6/comments/1/
 Content-type: application/json; charset=utf-8
 Authorization: token 360a195af21368d194f3fa9c14020903f7b9060c
 
-{
-    "text": "Hello, world"
-}
